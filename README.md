@@ -91,7 +91,7 @@ No protocolo modbus, defini-se que coils são variáveis booleanas (bits) e regi
 
 - **Get Registers**: recebe o valor dos registradores como bytes e retorna um array de inteiros de 16 bits, onde in inteiro de 16 bits é formado concatenando os bits de bytes consecutivos.
 
-    ![Alt text](imagens/config-function-Get_Registers.png)
+  ![Alt text](imagens/config-function-Get_Registers.png)
 
 ```JavaScript
 function getRegisters(n_registers) {
@@ -108,7 +108,7 @@ return msg;
 
 - **Get Bits**: recebe o valor das coils como bytes e retorna um array de bits, formados a partir dos bits que compõem cada byte.
 
-    ![Alt text](imagens/config-function-Get_bits.png)
+  ![Alt text](imagens/config-function-Get_bits.png)
 
 ```JavaScript
 let bits = (n, b) => [...Array(b)].map((x, i) => (n >> i) & 1);
@@ -161,9 +161,9 @@ return msg;
 
 ### Node-RED Companion Integration
 
-Para configurar entidades do Home Assistant dentro do NodeRED e exportar os valores do Modbus Server recebidos, é necessário instalar o HACS Node-RED Companion Integration. Instruções para intalação desta integração estão disponíveis em ??????????????????????.
+Para configurar entidades do Home Assistant dentro do NodeRED e exportar os valores do Modbus Server recebidos, é necessário instalar o HACS Node-RED Companion Integration. Instruções para intalação do HACS e integrações custom estão disponíveis em [HomeAssistant-HACS](https://github.com/Epaminondaslage/HomeAssistant-HACS).
 
-Uma vez instalado, os nodos aparecem no menu de nodos.
+Apos instalar o HACS, esta integração pode ser encontrada em **Configurações** -> **Dispositivos & Serviços** -> **+ ADICIONAR INTEGRAÇÃO** -> **Node-RED Companion**. Uma vez instalado, os nodos aparecem no menu de nodos.
 
 ![Alt text](imagens/home_assistant_entities.png)
 
@@ -255,6 +255,7 @@ Abaixo podemos ver a configuração do Modbus Server do NodeRED na interface WEB
 ![Alt text](imagens/OpenPLC_slave_edit.png)
 
 # Sites relacionados ao Home Assistant - OpenPLC com Node-RED
+
 - Site oficial do OpenPLC: https://openplcproject.com/
 - Site do HACS Node-RED Companion Integration: https://github.com/zachowj/hass-node-red
 
